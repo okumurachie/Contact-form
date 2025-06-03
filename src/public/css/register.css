@@ -30,14 +30,15 @@
     margin: 0 auto;
     width: 445px;
     height: 396px;
-    padding-top: 80px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 60px;
 }
 .form__group-inner{
     width: 100%;
     height: 102px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 .form__group-title{
     margin-bottom: 15px;
@@ -73,6 +74,9 @@ input{
     letter-spacing: 0;
     background-color: #f4f4f4;
     color: #beb1a6;
+}
+.form__error p{
+    color: red;
 }
 .form__button{
     text-align: center;

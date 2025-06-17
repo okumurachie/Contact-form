@@ -22,17 +22,9 @@
                         <input type="text" name="email" placeholder="例：test@example.com" value="{{ old('email') }}" />
                     </div>
                     <div class="form__error">
-<<<<<<< HEAD
-                        <p>
-                            @error('email')
-                            {{ $message }}
-                            @enderror
-                        </p>
-=======
                         @error('email')
                         <p>{{ $message }}</p>
                         @enderror
->>>>>>> 422c3cbb5c92c0be3dba1cb76f7f8ac03347b880
                     </div>
                 </div>
             </div>
@@ -45,17 +37,11 @@
                         <input type="password" name="password" placeholder="例：coachtech1106" />
                     </div>
                     <div class="form__error">
-<<<<<<< HEAD
                         <p>
                             @error('password')
                             {{ $message }}
                             @enderror
                         </p>
-=======
-                        @error('password')
-                        <p>{{ $message }}</p>
-                        @enderror
->>>>>>> 422c3cbb5c92c0be3dba1cb76f7f8ac03347b880
                     </div>
                 </div>
             </div>

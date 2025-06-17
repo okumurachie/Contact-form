@@ -22,7 +22,7 @@ class UserController extends Controller
     }
     public function showAdminForm(Request $request)
     {
-        $genderMap = ['1' => '男性', '2' => '女性', '3' => 'その他'];
+        // $genderMap = ['1' => '男性', '2' => '女性', '3' => 'その他'];
         $query = Contact::query();
         if ($request->filled('keyword')) {
             $rowInput = $request->keyword;
@@ -45,11 +45,11 @@ class UserController extends Controller
         if ($request->filled('created_at')) {
             $query->whereDate('created_at', $request->created_at);
         }
-        $contacts = $query->paginate(7);
-        $contacts->getCollection()->transform(function ($contact) use ($genderMap) {
-            $contact->gender = $genderMap[$contact->gender] ?? '不明';
-            return $contact;
-        });
+        $contacts = Contact::with('category')->paginate(7);
+        // $contacts->getCollection()->transform(function ($contact) use ($genderMap) {
+        //     $contact->gender = $genderMap[$contact->gender] ?? '不明';
+        //     return $contact;
+        // });
         $categories = Category::all();
 
         $detailContact = null;
